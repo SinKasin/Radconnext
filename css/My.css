@@ -1,0 +1,129 @@
+.whileXXL {
+    color: #FFF;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.white {
+    color: #FFF;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.white18 {
+    color: #FFF;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.black {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.black_s {
+    color: #000;
+    font-size: smaller;
+}
+
+.center {
+    text-align: center;
+}
+
+.black_xxl {
+    color: #000;
+    font-size: xx-large;
+}
+
+.greed {
+    color: #39e600;
+}
+
+.red {
+    color: #e60000;
+}
+
+.txtmedium {
+    font-size: medium;
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+}
+
+.centerTable {
+    margin: 0px auto;
+}
+
+#btn_left {
+    text-align: left;
+}
+
+.siixmenu{
+    height:120px;
+    width:200px;
+}
+
+.mrpmenu{
+    height:30px;
+    width:150px;
+}
+
+.green {
+    color: black\9;
+    background-color: #adebad\9;
+}
+.yellow {
+    color: black\9;
+    background-color: #ffffb3\9;
+}
+.redII {
+    color: black\9;
+    background-color: #ffcccc\9;
+}
+.blue {
+    color: black\9;
+    background-color: #99bbff\9;
+}
+.brown {
+    color: black\9;
+    background-color: #d9b38c\9;
+}
+.purple {
+    color: black\9;
+    background-color: #e6b3ff\9;
+}
+.green:not(.jqx-grid-cell-hover):not(.jqx-grid-cell-selected), .jqx-widget .green:not(.jqx-grid-cell-hover):not(.jqx-grid-cell-selected) {
+    color: black;
+    background-color: #adebad;
+}
+.yellow:not(.jqx-grid-cell-hover):not(.jqx-grid-cell-selected), .jqx-widget .yellow:not(.jqx-grid-cell-hover):not(.jqx-grid-cell-selected) {
+    color: black;
+    background-color: #ffffb3;
+}
+.redII:not(.jqx-grid-cell-hover):not(.jqx-grid-cell-selected), .jqx-widget .redII:not(.jqx-grid-cell-hover):not(.jqx-grid-cell-selected) {
+    color: black;
+    background-color: #ffcccc;
+}
+.blue:not(.jqx-grid-cell-hover):not(.jqx-grid-cell-selected), .jqx-widget .blue:not(.jqx-grid-cell-hover):not(.jqx-grid-cell-selected) {
+    color: black;
+    background-color: #99bbff;
+}
+.brown:not(.jqx-grid-cell-hover):not(.jqx-grid-cell-selected), .jqx-widget .brown:not(.jqx-grid-cell-hover):not(.jqx-grid-cell-selected) {
+    color: black;
+    background-color: #d9b38c;
+}
+.purple:not(.jqx-grid-cell-hover):not(.jqx-grid-cell-selected), .jqx-widget .purple:not(.jqx-grid-cell-hover):not(.jqx-grid-cell-selected) {
+    color: black;
+    background-color: #e6b3ff;
+}
+
+.urgent{
+    height:50px;
+}
+
+.img {
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+}

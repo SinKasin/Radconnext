@@ -1,0 +1,97 @@
+<!-- Sidebar -->
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+  <!-- Sidebar - Brand -->
+  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+    <div class="sidebar-brand-icon rotate-n-0">
+      <i class="fas fa-hospital"></i>
+    </div>
+    <div class="sidebar-brand-text mx-3">RadConnext</div>
+  </a>
+
+  <!-- Divider -->
+  <hr class="sidebar-divider my-0">
+  <!-- Heading -->
+  <div class="sidebar-heading"> General </div>
+  <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item" id="MainMenu">
+      <a class="nav-link collapsed" href="index.php">
+        <i class="far fa-id-badge"></i>
+        <span>เคสใหม่</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="case_histoty.php">
+        <i class="far fa-id-badge"></i>
+        <span>เคสทั้งหมด</span>
+      </a>
+    </li>
+
+    <li class="nav-item" id="Mdoctor">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDoctor" aria-expanded="true" aria-controls="collapseDoctor">
+        <i class="fas fa-h-square"></i>
+        <span>รังสีแพทย์</span>
+      </a>
+      <div id="collapseDoctor" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <a class="collapse-item" href="profile.php">ข้อมูลส่วนตัว</a>
+        </div>
+      </div>
+    </li>
+
+    <li class="nav-item" id="Mtech">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTech" aria-expanded="true" aria-controls="collapseTech">
+        <i class="far fa-id-badge"></i>
+        <span>ช่างเทคนิค</span>
+      </a>
+      <div id="collapseTech" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <a class="collapse-item" href="profile.php">ข้อมูลส่วนตัว</a>
+        </div>
+      </div>
+      <div id="collapseTech" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <a class="collapse-item" href="hospital.php">โรงพยาบาล</a>
+        </div>
+      </div>
+    </li>
+
+    <div class="sidebar-heading" id="MHAccount"> Account </div>
+
+    <li class="nav-item" id="Maccount">
+      <a class="nav-link collapsed" href="Account.php">
+        <i class="far fa-id-badge"></i>
+        <span>ธุระการ</span>
+      </a>
+    </li>
+
+    <div class="sidebar-heading" id="MHadmin"> Administrator </div>
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item" id="Hadmin">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAdmin" aria-expanded="true" aria-controls="collapseAdmin">
+        <i class="fas fa-fw fa-cog"></i>
+        <span>Setting</span>
+      </a>
+      <div id="collapseAdmin" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <h6 class="collapse-header">User</h6>
+          <a class="collapse-item" href="Register.php">Manage User</a>
+          <h6 class="collapse-header">Hospital</h6>
+          <a class="collapse-item" href="Hospital.php">Manage Hospital</a>
+          <h6 class="collapse-header">Order List</h6>
+          <a class="collapse-item" href="OrderList.php">Manage Order</a>
+        </div>
+      </div>
+    </li>
+
+    <hr class="sidebar-divider">
+
+  <!-- Sidebar Toggler (Sidebar) -->
+  <div class="text-center d-none d-md-inline">
+    <button class="rounded-circle border-0" id="sidebarToggle"></button>
+  </div>
+
+</ul>
+<!-- End of Sidebar -->
+<script type="text/javascript" src="js/Sidebar.js"></script>
