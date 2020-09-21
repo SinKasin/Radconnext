@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>Test API Hospital</title>
+         
+    </head>
+<body>
+ 
+<h1>Test API Hospital</h1>
+<div>Radconnext.</div>
+ 
+<!-- our form -->  
+<form id='userForm'>
+    <div><input type='text' id='HosID' placeholder='HosID' /></div>
+    <div><input type='text' id='HosName' placeholder='HosName' /></div>
+    <div><input type='text' id='HosAddress' placeholder='HosAddress' /></div>
+    <div><input type='text' id='HosTel1' placeholder='HosTel1' /></div>
+    <div><input type='text' id='HosTel2' placeholder='HosTel2' /></div>
+    <div><input type='text' id='HosContact' placeholder='HosContact' /></div>
+    <div><input type='text' id='HosRemark' placeholder='HosRemark' /></div>
+    <div><select id="HosAction">
+          <option value=""></option>
+          <option value="DEL">Delete</option>
+          <option value="SEC">Select</option>
+        </select>
+      </div>
+    <div><input type='submit' value='Save' /></div>
+</form>
+ 
+<!-- where the response will be displayed -->
+<div id='response'>Response</div>
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js "></script>
+<script>
+$(document).ready(function(){
+    $('#userForm').submit(function(){
+     
+        // show that something is loading
+        $('#response').html("<b>Loading response...</b>");
+         
+         POST_Rad();
+        
+        return false;
+ 
+    });
+});
+
+var POST_Rad = function(){
+
+      var act = 'RadHospital';
+      var pHosID = $('#HosID').val();
+      var pHosName = $('#HosName').val();
+      var pHosAddress = $('#HosAddress').val();
+      var pHosTel1 = $('#HosTel1').val();
+      var pHosTel2 = $('#HosTel2').val();
+      var pHosContact = $('#HosContact').val();
+      var pHosRemark = $('#HosRemark').val();
+      var pHosAction = $('#HosAction').val();
+
+    var pData = {
+      HosID : pHosID
+     ,HosName : pHosName
+     ,HosAddress : pHosAddress
+     ,HosTel1 : pHosTel1
+     ,HosTel2 : pHosTel2
+     ,HosContact : pHosContact
+     ,HosRemark : pHosRemark
+     ,HosAction : pHosAction
+    };
+
+          $.ajax({
+                    type: "POST",
+                    url: "https://www.radconnext.com/radconnext/sapi/api.class.php?action="+ act,
+                    dataType: "json",
+                    data: pData,
+                    success: function(data) {
+                      $('#response').html(JSON.stringify(data, undefined, 2));
+
+                      if(data.data[0]){
+                        var vHosID = data.data[0].Hos_ID;
+                        
+                        $('#HosID').val(vHosID);
+                      }
+                    },
+                    error : function (data) {
+                        alert( "Posting failed." );
+                    }
+
+
+          });
+  }
+</script>
+ 
+</body>
+</html>

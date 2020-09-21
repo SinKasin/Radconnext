@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Test API Active User</title>
+         
+    </head>
+<body>
+ 
+<h1>Test API Active User</h1>
+<div>Radconnext.</div>
+ 
+<!-- our form -->  
+<form id='userForm'>
+    <div><input type='text' id='UserName' placeholder='UserName' /></div>
+    <div><select id="Active">
+          <option value="1">Enable</option>
+          <option value="0">Disable</option>
+        </select>
+      </div>
+    <div><input type='submit' value='Submit' /></div>
+</form>
+ 
+<!-- where the response will be displayed -->
+<div id='response'>Response</div>
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js "></script>
+<script>
+$(document).ready(function(){
+    $('#userForm').submit(function(){
+     
+        // show that something is loading
+        $('#response').html("<b>Loading response...</b>");
+         
+         POST_Rad();
+        
+        return false;
+ 
+    });
+});
+
+var POST_Rad = function(){
+
+      var act = 'RadActiveUser';
+      var pUserName = $('#UserName').val();
+      var pActive = $('#Active').val();
+
+    var pData = {
+      UserName : pUserName
+     ,Active : pActive
+    };
+
+          $.ajax({
+                    type: "POST",
+                    url: "https://www.radconnext.com/radconnext/sapi/api.class.php?action="+ act,
+                    dataType: "json",
+                    data: pData,
+                    success: function(data) {
+                      $('#response').html(JSON.stringify(data, undefined, 2));
+                    },
+                    error : function (data) {
+                        alert( "Posting failed." );
+                    }
+
+
+          });
+  }
+
+  function stringify (x) {
+    console.log(JSON.stringify(x,null,'\t'));
+}
+</script>
+ 
+</body>
+</html>
